@@ -1,0 +1,177 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.general-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(46, 46, 46);
+    height: 100vh;
+    background-image: url(https://images3.alphacoders.com/133/1330443.png);
+
+}
+
+/* SEZIONE HOMEPAGE */
+
+.homepage{
+    background-color: rgb(42, 42, 42);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background-image: url(https://images3.alphacoders.com/133/1330443.png);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.homepage h1{
+    background: linear-gradient(90deg, rgb(0, 203, 234) 20%, rgb(254, 93, 0) 70%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.title{
+    display: flex;
+    align-items: center;
+    padding: 30px;
+    border: 3px solid rgb(23, 93, 163);
+    border-radius: 10px;
+    height: 100px;
+    background: transparent;
+    backdrop-filter: blur(50px);
+    color: rgb(69, 68, 68);
+    letter-spacing: 0.1rem;
+}
+
+.link-container{
+    margin:30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.link{
+    padding: 10px;
+    margin: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: x-large;
+    letter-spacing: 0.1rem;
+    transition: all 0.1s ease-in-out;
+    padding: 10px;
+    text-decoration: none;
+    background: linear-gradient(90deg, rgb(0, 207, 254) 20%, rgb(0, 157, 254) 70%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.link:hover{
+    padding:30px;
+}
+
+/* SEZIONE WELCOME */
+
+.welcome{
+    border: 3px solid rgb(1, 130, 251);
+    gap: 30px;
+    border-radius: 30px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 400px;
+    background: transparent;
+    backdrop-filter: blur(20px);    
+}
+
+.welcome h2{
+    font-size: 40px;
+    background: linear-gradient(90deg, rgb(0, 203, 234) 20%, rgb(0, 76, 254) 70%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* SEZIONE WEATHER */
+
+.weather-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+}
+
+
+.content-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:20px;
+    border: 3px solid rgb(1, 130, 251);
+    border-radius: 10px;
+    background: transparent;
+    backdrop-filter: blur(20px);
+    height: 400px;
+    padding: 20px;
+}
+
+.input{
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgb(1, 130, 251);
+    height: 50px;
+    font-size: 20px;
+    outline: none;   
+}
+
+input::placeholder{
+    background: rgb(0, 203, 234);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+textarea:focus, input:focus {
+    color: rgb(0, 203, 234);
+}
+
+.button{
+    color:rgb(1, 130, 251);
+    font-size: 20px;
+    background: transparent;
+    height: 50px ;
+    width: 110px;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    letter-spacing: 0.1rem;
+    transition: all 0.5s ease-in-out;
+    text-align: center;
+}
+
+.button:hover{
+    letter-spacing: 0.2rem;
+}
+
+
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-size: 30px;
+    text-align: center;
+    background: linear-gradient(90deg, rgb(0, 203, 234) 20%, rgb(0, 76, 254) 70%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
