@@ -6,8 +6,9 @@ export function Weather(){
     const [data , setData] = useState(null)
     const [loading , setLoading] = useState(false)
     const [input , setInput] = useState('')
+    const [error , setError] = useState(false)
     
-    async function getData(input){
+    async function getData(){
         
         setLoading(true)
 
@@ -15,13 +16,15 @@ export function Weather(){
             const res = await fetch(`http://api.weatherapi.com/v1/current.json?key=04ec7298495148a39b2154137232812&q=${input}`)
             const json = await res.json()
             setData(json)
-        } catch (error) {
             if(res.status !== 200){
-                console.log(error);
+                setError(true)
                 setData(null)
-            }    
+            } 
+        } catch (error) {
+            console.log(error)  
         } finally {
             setLoading(false)
+            
         }
     }
     
@@ -30,10 +33,11 @@ export function Weather(){
         const value = e.target.value
         setInput(value)
         console.log(value)
+        setError(false)    
     }
 
     function handleBtn(){
-        getData(input)
+        getData()
         setInput('')
     }
 
@@ -46,7 +50,7 @@ export function Weather(){
                 </div>
                 <div className="content">
                     {loading && <p>Loading...</p>}
-                    {data && !data.location && <p>Errore</p>}
+                    {error && <p>Errore</p>}
                     {data && data.location ? <div>
                         <p>{data.location.name}</p>
                         <p>{data.location.localtime}</p>
